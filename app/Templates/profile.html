@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Profile</h1>
+    <form method="post">
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio">{{ current_user.bio }}</textarea>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
