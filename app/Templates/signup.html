@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <style>
+        /* Add necessary styles */
+        form { max-width: 300px; margin: 0 auto; }
+        label, input { display: block; width: 100%; margin-bottom: 10px; }
+        button { width: 100%; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <!-- Sign Up Form -->
+    <form id="signup-form" action="/signup" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Sign Up</button>
+        
+        <!-- Link to Login Page -->
+        <p>Already have an account? <a href="/login">Login here</a></p>
+    </form>
+
+    <script>
+        // JavaScript for redirecting to Purchase page after Sign Up
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Perform Sign Up process (e.g., send form data to server)
+            
+            // Redirect to Purchase page after successful Sign Up
+            window.location.href = '/purchase';
+        });
+    </script>
+</body>
+</html>
